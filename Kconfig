@@ -456,7 +456,7 @@ config WLAN_DRV_BUILD_IN
 	help
 		If enabled, this will force some module build as inline
 
-config MTK_MODULE_FORCE_INLINE
+config MTK_MODULE_FORCE_INLINE_FM_GPS
 	depends on MTK_FMRADIO && MTK_GPS_SUPPORT
 	bool "Force inline gps and fm driver"
 	default n
