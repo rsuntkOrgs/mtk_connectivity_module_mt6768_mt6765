@@ -73,6 +73,7 @@ endif
             export MTK_COMBO_CHIP=CONNAC2X2
         else
             export MTK_COMBO_CHIP=CONNAC
+            export BT_PLATFORM=connac1x
         endif
 
         # for gen4m options
