@@ -209,7 +209,9 @@ endif
 # Rissu: simplify things
 ifneq ($(filter "CONSYS_%",$(CONFIG_MTK_COMBO_CHIP)),)
 $(MODULE_NAME)-objs += common_main/platform/$(MTK_PLATFORM).o
+ifneq ($(wildcard common_main/platform/$(MTK_PLATFORM)_dbg.c),)
 $(MODULE_NAME)-objs += common_main/platform/$(MTK_PLATFORM)_dbg.o
+endif
 endif
 
 #$(MODULE_NAME)-objs += common_main/platform/wmt_plat_stub.o
