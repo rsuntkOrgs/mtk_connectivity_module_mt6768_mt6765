@@ -19,7 +19,10 @@
 # Rissu changes on 23 October 2024
 #
 TOP := $(srctree)/drivers/misc/mediatek/connectivity
+ifeq ($(TARGET_BUILD_VARIANT),)
+$(warning TARGET_BUILD_VARIANT is empty! Using default option.)
 TARGET_BUILD_VARIANT := user
+endif
 WMT_SRC_FOLDER := $(TOP)/common
 
 export TOP WMT_SRC_FOLDER TARGET_BUILD_VARIANT
